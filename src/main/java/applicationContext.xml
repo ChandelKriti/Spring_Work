@@ -8,6 +8,10 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	
+	<!-- load the properties file sports.properties -->
+	<context:property-placeholder location="classpath:sports.properties" />
+	
+	
     <!-- Define your beans here -->
     
     <!-- define the dependency -->
@@ -21,28 +25,36 @@
  		class="dependencyInjection.TrackCoach">	 		
  	</bean> -->
  	
- 	<bean id="myFortune"
+ 	<!-- <bean id="myFortune"
  		class="dependencyInjection.HappyFortuneService">	 		
+ 	</bean> -->
+ 	
+ 	<bean id="myFortune"
+ 		class="dependencyInjection.RandomFortuneService">	 		
  	</bean>
  	
- 	 <bean id="myCoach"
- 		class="dependencyInjection.TrackCoach">	 
+ 	<bean id="myCoach"
+ 		class="dependencyInjection.BaseballCoach">	 
  		
- 		<!-- set up constructor injection -->
+ 		
  		<constructor-arg ref="myFortune" />		
+ 		
  	</bean> 
  	
- 	<bean id="myCricketCoach"
+ 	<!-- <bean id="myCricketCoach"
  		class="dependencyInjection.CricketCoach">
  			
- 		<!-- set up setter injection -->
+ 		
  		<property name="fortuneService" ref="myFortune" />
  		
- 		<!-- inject literal values-->
- 		<property name="emailAddress" value="abc@example.com" />
- 		<property name="team" value="Royal Challengers Banglore" />
  		
- 	</bean>
+ 		 <property name="emailAddress" value="abc@example.com" /> 
+ 		 <property name="team" value="Royal Challengers Banglore" /> 
+ 		
+ 		<property name="emailAddress" value="${foo.email}" />
+ 		<property name="team" value="${foo.team}"    />
+ 		
+ 	</bean> --> 
  	
 
 </beans>
