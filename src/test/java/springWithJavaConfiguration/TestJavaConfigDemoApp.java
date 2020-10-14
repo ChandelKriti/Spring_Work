@@ -1,16 +1,16 @@
-package springAnnotations;
+package springWithJavaConfiguration;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 
-public class TestAnnotationDemoApp {
+public class TestJavaConfigDemoApp {
 
 	@Test
-	public void testAnnotationDemoApp() {
+	public void testJavaConfigDemoApp() {
 		
-		AnnotationDemoApp tc = new AnnotationDemoApp();
+		JavaConfigDemoApp tc = new JavaConfigDemoApp();
 		
 		String expected = "Practice your backhand volley";
 		
@@ -18,9 +18,9 @@ public class TestAnnotationDemoApp {
 	}
 	
 	@Test
-	public void testAnnotationDemoApp1() {
+	public void testJavaConfigDemoApp1() {
 		
-		AnnotationDemoApp tc = new AnnotationDemoApp();
+		JavaConfigDemoApp tc = new JavaConfigDemoApp();
 		
 		String expected = "Today is your lucky day";
 		

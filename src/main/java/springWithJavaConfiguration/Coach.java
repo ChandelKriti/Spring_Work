@@ -1,4 +1,4 @@
-package springAnnotations;
+package springWithJavaConfiguration;
 
 public interface Coach {
 
